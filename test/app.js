@@ -21,6 +21,7 @@ var foo = {
 }
 
 
+
 // describe('expect', () => {
 //     it('expect 1111', () => {
 //         expect(foo).to.be.deep.equal({
@@ -37,53 +38,55 @@ var foo = {
 // })
 
 
+/**
 
-
-describe('async.test.js - 异步测试',  () =>{
-  it('异步请求应该返回一个对象', (done) =>{
-    request
-      .get('https://baidu.com')
-      .end((err, res)=>{
-        // console.log(res.text);
-        expect(res).to.be.an('object');
-        done();
-      });
-  });
+describe('async.test.js - 异步测试', () => {
+    it('异步请求应该返回一个对象', (done) => {
+        request
+            .get('https://baidu.com')
+            .end((err, res) => {
+                // console.log(res.text);
+                expect(res).to.be.an('object');
+                done();
+            });
+    });
 });
 
+*/
 
 
-describe('hooks', function() {
 
-  before(function() {
-    // 在本区块的所有测试用例之前执行
-    console.log("...before");
-  });
+// describe('hooks', function() {
 
-  after(function() {
-    // 在本区块的所有测试用例之后执行
-    console.log("after....");
-  });
+//     before(function() {
+//         // 在本区块的所有测试用例之前执行
+//         console.log("...before");
+//     });
 
-  beforeEach(function() {
-    // 在本区块的每个测试用例之前执行
-  console.log("...beforeEach");
-  });
+//     after(function() {
+//         // 在本区块的所有测试用例之后执行
+//         console.log("after....");
+//     });
 
-  afterEach(function() {
-    // 在本区块的每个测试用例之后执行
-  console.log("afterEach...");
-  });
+//     beforeEach(function() {
+//         // 在本区块的每个测试用例之前执行
+//         console.log("...beforeEach");
+//     });
 
-  it.only('hook 前后1',   ()=> {
-         expect(1).to.be.equal(1)
+//     afterEach(function() {
+//         // 在本区块的每个测试用例之后执行
+//         console.log("afterEach...");
+//     });
 
-  })
+//     it.only('hook 前后1', () => {
+//         expect(1).to.be.equal(1)
 
-  it('hook 前后2',   ()=> {
-         expect(1).to.be.equal(1)
+//     })
 
-  })
+//     it('hook 前后2', () => {
+//         expect(1).to.be.equal(1)
 
-  // test cases
-});
+//     })
+
+//     // test cases
+// });

@@ -2,19 +2,7 @@ import {expect} from 'chai';
 
 import {createStore} from "redux";
 
-const counter = (preState = 0, action) => {
-    if (action && action.type !==  undefined) {
-        switch (action.type) {
-            case "INC":
-                return preState + 1;
-            case "DESC":
-                return preState - 1;
-            default:
-                return preState;
-        }
-    }
-    return preState;
-}
+import counter  from "./countReducer"
 
 describe('test state', () => {
     var currentState;
@@ -47,10 +35,10 @@ describe('redux createStore', ()=> {
     const render =()=>{
         console.log('  log state:',store.getState());
     };
-
+    //数据变化 回调函数 ：去更新UI
     store.subscribe(render)
 
-    render()
+    render() //先调用一次初始化开始的state
 
     it('dispath action',   ()=> {
         store.dispatch({
