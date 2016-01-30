@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha -t 10000 --compilers js:babel-core/register -w",
+    "test": "mocha -t 5000 --compilers js:babel-core/register -w",
     "build": "babel src -d dest -w -s   ",
     "lint": "eslint ./app.js"
   },
@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "babel-cli": "^6.0.0",
-    "lodash": "^4.0.1"
+    "lodash": "^4.0.1",
+    "redux": "^3.1.4"
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
